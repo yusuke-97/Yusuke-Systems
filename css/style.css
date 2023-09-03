@@ -277,6 +277,82 @@ img {
 .contact-text {
   margin-top: 10px;
 }
+
+/* お問い合わせ */
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* 外枠 */
+#contact > div > form > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+/* 左列　見出し */
+.contact-heading {
+  width: 240px;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+/* 見出しのラベル */
+.contact-label {
+  width: 150px;
+  font-weight: bold;
+}
+
+/* 必須 */
+.contact-span {
+  color: #ce2222;
+  /* margin: 0 0 0 20px; */
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+/* テキストボックス */
+.contact-textbox {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom-width: 1px;
+  border-bottom-color: #707070;
+  border-style: solid;
+  background-color: #fafafa;
+  height: 56px;
+  width: 400px;
+}
+
+/* お問い合わせ内容のテキストエリア */
+.contact-textarea {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom-width: 1px;
+  border-bottom-color: #707070;
+  background-color: #fafafa;
+  width: 400px;
+  height: 200px;
+  resize: none;
+}
+
+.contact-list {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-list > a {
+  display: flex;
+  align-items: center;
+}
+
 /*--------------------------------
  ページトップ
 ---------------------------------*/
@@ -513,6 +589,63 @@ img {
 
   .profile-body p:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  /* Contact */
+  #contact > form > div > div {
+    margin-bottom: 20px;
+  }
+
+  .contact-heading {
+    margin-bottom: 20px;
+  }
+
+  /* ラベル */
+  .contact-label {
+    width: 130px;
+    font-weight: bold;
+  }
+
+  .contact-label-mobile {
+    width: 60px;
+  }
+
+  /* 必須 */
+  .contact-span {
+    color: #ce2222;
+    font-weight: bold;
+    margin-right: 80px;
+  }
+
+  .contact-span-mobile {
+    margin-right: 140px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-textbox {
+    height: 56px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #fafafa;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    border-style: solid;
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .contact-textarea {
+    height: 150px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #fafafa;
+    min-width: 300px;
+    width: 100%;
   }
 
   /* フッター */
