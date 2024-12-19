@@ -1164,7 +1164,6 @@ img {
     /* justify-content: space-between; */
     justify-content: space-around;
     width: 100%;
-    border: 1px solid red;
     flex-wrap: nowrap;
   }
 
@@ -1405,7 +1404,6 @@ img {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    border: 1px solid red;
     flex-wrap: nowrap;
   }
 
@@ -1450,7 +1448,6 @@ img {
   .profile-img {
     display: flex;
     justify-content: center;
-    border: 1px solid red;
     width: 100%;
   }
 
