@@ -6,12 +6,25 @@
     <meta description="Yusuke Systemsは石山優友のポートフォリオです。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Yusuke Systems</title>
+
+    <!-- フォントやCSSの読み込み -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- Chart.jsの読み込み -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- jQueryの読み込み -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <!-- カスタムJSの読み込み -->
+    <script src="js/script.js" defer></script>
 </head>
+
 
 <body>
     <div class="wrapper">
@@ -37,53 +50,41 @@
         <main class="content">
 
             <!-- mv -->
-            <div class="mv" style="background-color: black;">
+            <div class="mv">
                 <div class="mv-container">
-                    <img src="img/main.png" alt="">
+                    <img src="img/main.jpeg" alt="メイン画像">
+                    <div class="mv-text">
+                        <h1>YUSUKE ISHIYAMA<br>PORTFOLIO</h1>
+                        <p>技術を駆使して、想いをカタチに。</p>
+                    </div>
+                    <div class="mv-gears">
+                        <img src="img/gears.gif" alt="歯車アニメーション">
+                    </div>
                 </div>
             </div>
             <!-- /mv -->
 
+
             <!-- works -->
             <section class="works section" id="works">
-                <div class="container">
-                    <h2 class="title">WORKS</h2>
+                <div class="cmn-container">
+                    <h2 class="title"><span class="title-jp">作品紹介</span><span class="title-en">WORKS</span></h2>
                     <div class="works-list">
                         <a class="works-item" href="works-1.html">
                             <div class="works-img"><img src="img/works/laravel1.png" alt="laravel1" /></div>
-                            <p class="works-name">画像投稿型SNSのWebアプリケーション（架空アプリ）</p>
-                            <p class="works-info">
+                            <p class="works-name">画像投稿型SNS【架空アプリ】</p>
+                            <!-- <p class="works-info">
                                 HTML / CSS / JavaScript / jQuery / PHP / Laravel / Amazon S3 / レスポンシブ対応
-                            </p>
+                            </p> -->
                         </a>
                         <a class="works-item" href="works-2.html">
                             <div class="works-img"><img src="img/works/laravel2.png" alt="laravel2" /></div>
-                            <p class="works-name">飲食店予約サービスのWebアプリケーション（架空アプリ）</p>
-                            <p class="works-info">
+                            <p class="works-name">飲食店予約サービス【架空アプリ】</p>
+                            <!-- <p>
                                 HTML / CSS / JavaScript / Vue.js / PHP / Laravel / Docker / Elasticsearch / バッチ処理 /
                                 Amazon S3 / レスポンシブ対応
-                            </p>
+                            </p> -->
                         </a>
-                        <!-- <a class="works-item" href="works-3.html">
-                            <div class="works-img"><img src="img/works/wordpress1.png" alt="WordPress" /></div>
-                            <p class="works-name">美容室のHP</p>
-                            <p class="works-info">WordPress</p>
-                        </a> -->
-                        <!-- <a class="works-item" href="works-4.html">
-                            <div class="works-img"><img src="img/works/photoshop.png" alt="Photoshop" /></div>
-                            <p class="works-name">ITスクールのバナー</p>
-                            <p class="works-info">Photoshop</p>
-                        </a> -->
-                        <!-- <a class="works-item" href="works-5.html">
-                            <div class="works-img"><img src="img/works/xd.png" alt="AdobeXD" /></div>
-                            <p class="works-name">ITスクールのLP</p>
-                            <p class="works-info">AdobeXD</p>
-                        </a> -->
-                        <!-- <a class="works-item" href="works-6.html">
-                            <div class="works-img"><img src="img/works/wordpress2.png" alt="WordPress2" /></div>
-                            <p class="works-name">大学のHP</p>
-                            <p class="works-info">WordPress/PHP</p>
-                        </a> -->
                     </div>
                 </div>
             </section>
@@ -91,8 +92,33 @@
 
             <!-- skill -->
             <section class="skill section" id="skill">
-                <div class="container">
-                    <h2 class="title">SKILL</h2>
+                <div class="cmn-container">
+                    <h2 class="title"><span class="title-jp">できること</span><span class="title-en">SKILL</span></h2>
+                    <div class="skill-content">
+                        <!-- レーダーチャート -->
+                        <div class="chart-container">
+                            <canvas id="skillChart"></canvas>
+                        </div>
+
+                        <!-- 5段階評価 -->
+                        <div class="skill-rating">
+                            <h3>5. Expert</h3>
+                            <p>専門知識を持ち、プロジェクト全体を主導し戦略的な設計やアーキテクチャの決定が可能。</p>
+
+                            <h3>4. Advanced</h3>
+                            <p>応用的なスキルを持ち、チームメンバーをサポート・指導しながら高度な問題に対応可能。</p>
+
+                            <h3>3. Independent</h3>
+                            <p>自立して標準的なタスクを遂行でき、中規模プロジェクトに貢献可能な段階。</p>
+
+                            <h3>2. Proficient</h3>
+                            <p>実務で指導を受けながら作業でき、小規模なタスクを遂行できる段階。</p>
+
+                            <h3>1. Foundation</h3>
+                            <p>基礎的な知識を持ち、個人学習や独学レベルで基本的な作業ができる状態。</p>
+                        </div>
+                    </div>
+
                     <div class="skill-list">
                         <div class="skill-item">
                             <p class="skill-img"><img src="img/skills/html.png" alt="html"></p>
@@ -143,11 +169,11 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <p class="skill-img"><img src="img/skills/s3.png" alt="adobexd"></p>
+                            <p class="skill-img"><img src="img/skills/cakephp.png" alt="cakephp"></p>
                             <div class="skill-body">
-                                <h3 class="skill-name">Amazon S3</h3>
+                                <h3 class="skill-name">CakePHP</h3>
                                 <p class="skill-text">
-                                    Amazon S3を用いて、バケットに画像を保存し、その画像を管理することが可能です。
+                                    CakePHPを用いて、MVCのWebアプリケーションの開発・保守が可能です。
                                 </p>
                             </div>
                         </div>
@@ -161,6 +187,15 @@
                             </div>
                         </div>
                         <div class="skill-item">
+                            <p class="skill-img"><img src="img/skills/codeigniter.png" alt="codeigniter"></p>
+                            <div class="skill-body">
+                                <h3 class="skill-name">CodeIgniter</h3>
+                                <p class="skill-text">
+                                    CodeIgniterを用いて、MVCのWebアプリケーションの開発・保守が可能です。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="skill-item">
                             <p class="skill-img"><img src="img/skills/docker.png" alt="docker"></p>
                             <div class="skill-body">
                                 <h3 class="skill-name">Docker</h3>
@@ -169,132 +204,122 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <p class="skill-img"><img src="img/skills/elasticsearch.png" alt="elasticsearch"></p>
-                            <div class="skill-body">
-                                <h3 class="skill-name">Elasticsearch</h3>
-                                <p class="skill-text">
-                                    Elasticsearchを用いて検索機能を実装することが可能です。
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </section>
-            <!-- /skill -->
+    </div>
+    </section>
+    <!-- /skill -->
 
-            <!-- about -->
-            <section class="about section" id="about">
-                <div class="container">
-                    <h2 class="title">ABOUT</h2>
-                    <div class="profile">
-                        <p class="profile-img" style="display: flex; align-items: center; height: 100%;">
-                            <img src="img/about.jpg" alt="about">
-                        </p>
-                        <div class="profile-body">
-                            <p style="font-weight: bold;">
-                                石山 優友
-                            </p>
-                            <p>
-                                東京都に在住しております。
-                                プログラミングに関して深く勉強したいという思いと、より具体的で実践的な内容を学びたいと思いからプログラミングスクールに入塾し、現在も学習を継続しております。
-                                Webアプリケーション開発におけるコーディングは得意分野で、エラーも問題なく対処・解決できることが強みです。
-                                学ぶことへの楽しさと同時に、日々の実務経験を通してスキルをさらに磨きたいと考えております。
-                                これからもエンジニアとしての道を精進し専門性を高めていくことで、プロジェクトに対して最大限の価値を提供したいと考えております。
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- /about -->
-
-            <!-- contact -->
-            <section class="contact section" id="contact">
-                <div class="container">
-                    <h2 class="title">CONTACT</h2>
-                    <p class="lead">
-                        お問い合わせは、<br class="sp-only">下記のフォームまたはLINEより<br class="sp-only">お願いいたします。
+    <!-- about -->
+    <section class="about section" id="about">
+        <div class="cmn-container">
+            <h2 class="title"><span class="title-jp">私について</span><span class="title-en">ABOUT</span></h2>
+            <div class="profile">
+                <p class="profile-img" style="display: flex; align-items: center; height: 100%;">
+                    <img src="img/about.jpg" alt="about">
+                </p>
+                <div class="profile-body">
+                    <p class="profile-name">
+                        石山 優友
+                    </p>
+                    <p class="profile-detail">
+                        東京都に在住しております。
+                        プログラミングに関して深く勉強したいという思いと、より具体的で実践的な内容を学びたいと思いからプログラミングスクールに入塾し、卒業後は現職でエンジニアとして働いております。
+                        Webアプリケーション開発におけるコーディングは得意分野で、エラーも問題なく対処・解決できることが強みです。
+                        学ぶことへの楽しさと同時に、日々の実務経験を通してスキルをさらに磨きたいと考えております。
+                        これからもエンジニアとしての道を精進し専門性を高めていくことで、プロジェクトに対して最大限の価値を提供したいと考えております。
                     </p>
 
-                    <form id="form">
-                        <input type="text" name="honeypot" style="display:none">
-                        <!-- STATIC FORMSのアクセスキー -->
-                        <input type="hidden" name="accessKey" value="ec8beafa-d6d7-4e32-9d47-514c9f80258c">
-                        <!--メールのタイトル-->
-                        <input type="hidden" name="subject" value="お問い合わせフォーム">
-                        <!--送信先のメールアドレスをvalueに設定する-->
-                        <input type="hidden" name="replyTo" value="">
-                        <!--redirectToのURLは公開後ののURLへリンクする-->
-                        <input type="hidden" name="redirectTo" value="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /about -->
 
-                        <div>
-                            <div class="contact-heading">
-                                <label class="contact-label contact-label-mobile">お名前</label><span
-                                    class="contact-span contact-span-mobile">必須</span>
-                            </div>
-                            <div class="contact-form">
-                                <input id="name" type="text" name="name" placeholder="入力してください" class="contact-textbox">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="contact-heading">
-                                <label class="contact-label contact-label-mobile">フリガナ</label><span
-                                    class="contact-span contact-span-mobile">必須</span>
-                            </div>
-                            <div class="contact-form">
-                                <input id="furigana" type="text" name="name" placeholder="入力してください"
-                                    class="contact-textbox">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="contact-heading">
-                                <label class="contact-label">メールアドレス</label><span class="contact-span">必須</span>
-                            </div>
-                            <div class="contact-form">
-                                <input id="email" type="text" name="email" placeholder="入力してください"
-                                    class="contact-textbox">
-                            </div class="contact-form">
-                        </div>
-                        <div>
-                            <div class="contact-heading">
-                                <label class="contact-label">お問い合わせ内容</label><span class="contact-span">必須</span>
-                            </div>
-                            <div class="contact-form">
-                                <textarea id="message" class="contact-textarea " placeholder="入力してください"
-                                    name="message"></textarea>
-                            </div>
-                        </div>
-                        <input id="submit" type="image" src="img/button-submit.png" alt="送信する">
-                    </form>
+    <!-- contact -->
+    <section class="contact section" id="contact">
+        <div class="cmn-container">
+            <h2 class="title"><span class="title-jp">お問い合わせ</span><span class="title-en contact">CONTACT</span></h2>
+            <p class="lead">
+                お問い合わせは、<br class="sp-only">下記のフォームまたはLINEより<br class="sp-only">お願いいたします。
+            </p>
 
-                    <div class="contact-list">
-                        <!-- <a href="http://instagram.com/" target="_blank">
-                            <img src="img/icon_instagram.gif" alt="Instagram">
-                        </a> -->
-                        <a href="https://lin.ee/yfZlli4">
-                            <img src="img/icon_line.png" style="width: 50px; height: 50px;" alt="LINE">
-                            <label class="contact-label" style="margin-left: 30px;">LINEはこちら</label>
-                        </a>
+            <form id="form">
+                <input type="text" name="honeypot" style="display:none">
+                <!-- STATIC FORMSのアクセスキー -->
+                <input type="hidden" name="accessKey" value="ec8beafa-d6d7-4e32-9d47-514c9f80258c">
+                <!--メールのタイトル-->
+                <input type="hidden" name="subject" value="お問い合わせフォーム">
+                <!--送信先のメールアドレスをvalueに設定する-->
+                <input type="hidden" name="replyTo" value="">
+                <!--redirectToのURLは公開後ののURLへリンクする-->
+                <input type="hidden" name="redirectTo" value="">
+
+                <div>
+                    <div class="contact-heading">
+                        <label class="contact-label contact-label-mobile">お名前</label><span
+                            class="contact-span contact-span-mobile">必須</span>
+                    </div>
+                    <div class="contact-form">
+                        <input id="name" type="text" name="name" placeholder="入力してください" class="contact-textbox">
                     </div>
                 </div>
-            </section>
-            <!-- /contact -->
-            <div class="page-top" id="js-page-top">
-                <span class="material-icons-outlined">expand_less</span>
-            </div>
-        </main>
+                <div>
+                    <div class="contact-heading">
+                        <label class="contact-label contact-label-mobile">フリガナ</label><span
+                            class="contact-span contact-span-mobile">必須</span>
+                    </div>
+                    <div class="contact-form">
+                        <input id="furigana" type="text" name="name" placeholder="入力してください" class="contact-textbox">
+                    </div>
+                </div>
+                <div>
+                    <div class="contact-heading">
+                        <label class="contact-label">メールアドレス</label><span class="contact-span">必須</span>
+                    </div>
+                    <div class="contact-form">
+                        <input id="email" type="text" name="email" placeholder="入力してください" class="contact-textbox">
+                    </div class="contact-form">
+                </div>
+                <div>
+                    <div class="contact-heading">
+                        <label class="contact-label">お問い合わせ内容</label><span class="contact-span">必須</span>
+                    </div>
+                    <div class="contact-form">
+                        <textarea id="message" class="contact-textarea " placeholder="入力してください"
+                            name="message"></textarea>
+                    </div>
+                </div>
+                <input id="submit" type="image" src="img/button-submit.png" alt="送信する">
+            </form>
 
-        <!-- footer -->
-        <footer class="footer">
-            <div class="copyright">&copy;YUSUKE ISHIYAMA</div>
-        </footer>
-        <!-- /footer -->
+            <div class="contact-list">
+                <!-- <a href="http://instagram.com/" target="_blank">
+                            <img src="img/icon_instagram.gif" alt="Instagram">
+                        </a> -->
+                <a href="https://lin.ee/yfZlli4">
+                    <img src="img/icon_line.png" style="width: 50px; height: 50px;" alt="LINE">
+                    <label class="contact-label" style="margin-left: 30px;">LINEはこちら</label>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- /contact -->
+    <!-- <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+    </div> -->
+    <div class="page-top" id="js-page-top">
+        <img src="img/page-top-icon.svg" alt="ページトップ" class="page-top-icon">
+    </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="copyright">&copy;YUSUKE ISHIYAMA</div>
+    </footer>
+    <!-- /footer -->
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script type='text/javascript' src="js/script.js"></script>
 </body>
 
 </html>

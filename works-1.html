@@ -17,12 +17,21 @@
   <div class="wrapper">
 
     <!-- header -->
-    <header class="header ">
+    <header class="header">
       <div class="container">
         <h1 class="header-logo">
           <a href="index.html">YUSUKE ISHIYAMA</a>
         </h1>
-        <nav class="gnav">
+
+        <!-- ハンバーガーメニューのアイコン -->
+        <!-- <button class="hamburger-menu" id="hamburger-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button> -->
+
+        <!-- ナビゲーションメニュー -->
+        <nav class="gnav" id="nav-menu">
           <ul class="gnav-list">
             <li class="gnav-item"><a href="index.html#works">WORKS</a></li>
             <li class="gnav-item"><a href="index.html#skill">SKILL</a></li>
@@ -38,89 +47,195 @@
 
       <article class="article">
         <div class="article-container">
-          <h2 class="article-title">画像投稿型SNSアプリ【ISHISTAGRAM】</h2>
+          <h2 class="article-title fade-in">画像投稿型SNSアプリ【ISHISTAGRAM】</h2>
           <div class="article-body">
-            <h3>プロフィール画面</h3>
-            <p>
-              <img src="img/works-detail/works-1-1.png" alt="">
-            </p>
-            <h3>新規投稿画面</h3>
-            <p>
-              <img src="img/works-detail/works-1-2.png" alt="">
-            </p>
-            <h3>投稿編集画面</h3>
-            <p>
-              <img src="img/works-detail/works-1-3.png" alt="">
-            </p>
-            <h3>投稿一覧画面</h3>
-            <p>
+            <div class="fade-in">
+              <img src="img/works-detail/works-1-1.png" alt="トップ画像">
+              <a href="#" class="view-site">
+                View Site
+                <span class="iconify" data-icon="si:double-arrow-right-duotone" data-inline="false"></span>
+              </a>
+            </div>
+            <div class="fade-in">
+              <ul>
+                <li>
+                  <img src="img/works-detail/github-icon.svg">
+                  <a href="https://github.com/yusuke-97/ishistagram_app"
+                    class="github-link">https://ishistagram-914f42dea72b.herokuapp.com</a>
+                </li>
+                <!-- <h4>テストユーザー</h4>
+                <span><strong>メールアドレス: </strong>ishistagram_app@example.com</span><br>
+                <span><strong>パスワード: </strong>Ishistagram_app</span> -->
+                <li>
+                  <div class="arrow-box">Role</div>
+                  <span class="text">基本設計、開発、テスト</span>
+                </li>
+                <li>
+                  <div class="arrow-box">Tech</div>
+                  <span class="text">HTML / CSS / JavaScript / jQuery / PHP / Laravel / Amazon S3</span>
+                </li>
+              </ul>
+            </div>
+            <div class="fade-in">
+              <h3>サービスを開発したきっかけ</h3>
+              <p>
+                SNSが様々なシーンで活用される中で、SNSユーザーが個人の興味に応じたコンテンツを効率的に整理し、同じ趣味を持つコミュニティと繋がる方法が限られていると感じました。
+                そこで、趣味や興味のあるコンテンツを「ラベル」でカスタマイズし、個人の趣向を反映させたコンテンツ管理ができることを目的に開発しました。
+              </p>
+            </div>
+            <div class="fade-in">
+              <h3>概要</h3>
+              <p>
+                プロフィール画面と新規投稿画面、投稿編集画面、投稿一覧画面、検索結果画面、プロフィール編集画面の6画面から構成される画像投稿型SNSのWebアプリケーションです。
+              </p>
+            </div>
+            <ul class="overview-list">
+              <li>
+                <a href="#profile">
+                  <img src="img/works-detail/gear-icon.svg">
+                  <span class="text">プロフィール画面</span>
+                </a>
+              </li>
+              <li>
+                <a href="#new-post">
+                  <img src="img/works-detail/gear-icon.svg">
+                  <span class="text">新規投稿画面</span>
+                </a>
+              </li>
+              <li>
+                <a href="#edit-post">
+                  <img src="img/works-detail/gear-icon.svg">
+                  <span class="text">投稿編集画面</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="#post-list">
+                  <img src="img/works-detail/gear-icon.svg">
+                  <span class="text">投稿一覧画面</span>
+                </a>
+              </li> -->
+              <li>
+                <a href="#search-result">
+                  <img src="img/works-detail/gear-icon.svg">
+                  <span class="text">検索結果画面</span>
+                </a>
+              </li>
+              <li>
+                <a href="#edit-profile">
+                  <img src="img/works-detail/gear-icon.svg">
+                  <span class="text">プロフィール編集画面</span>
+                </a>
+              </li>
+            </ul>
+            <div>
+              <h3 id="profile">プロフィール画面</h3>
+              <div class="views-detail">
+                <img src="img/works-detail/works-1-1.png" alt="">
+                <p class="detail">
+                  ユーザーのプロフィール画面では、過去に投稿したことがあるものが表示されます。
+                  また、他のユーザーをフォローしたり、自分のプロフィールを編集することもできます。
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 id="new-post">新規投稿画面</h3>
+              <div class="views-detail">
+                <img src="img/works-detail/works-1-2.png" alt="">
+                <p class="detail">
+                  画像と投稿文、タグをつけて投稿することができます。タグをつけることによって、
+                  プロフィール画面で、投稿の管理がしやすくなります。
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 id="edit-post">投稿編集画面</h3>
+              <div class="views-detail">
+                <img src="img/works-detail/works-1-3.png" alt="">
+                <p class="detail">
+                  過去の投稿を編集することができます。例えば、タグを変更したり、追加したりして
+                  プロフィール画面で管理しやすくなります。
+                </p>
+              </div>
+            </div>
+            <!-- <div>
+              <h3 id="post-list">投稿一覧画面</h3>
               <img src="img/works-detail/works-1-4.png" alt="">
-            </p>
-            <h3>検索結果画面</h3>
-            <p>
-              <img src="img/works-detail/works-1-5.png" alt="">
-            </p>
-            <h3>プロフィール編集画面</h3>
-            <p>
-              <img src="img/works-detail/works-1-6.png" alt="">
-            </p>
+            </div> -->
+            <div>
+              <h3 id="search-result">検索結果画面</h3>
+              <div class="views-detail">
+                <img src=" img/works-detail/works-1-5.png" alt="">
+                <p class="detail">
+                  ハッシュタグやタグで関連する他のユーザーの投稿を検索することができます。
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 id="edit-profile">プロフィール編集画面</h3>
+              <div class="views-detail">
+                <img src="img/works-detail/works-1-6.png" alt="">
+                <p class="detail">
+                  プロフィール編集画面では、ユーザーの基本情報を編集することができます。
+                </p>
+              </div>
+            </div>
+            <div class=" fade-in">
+              <h3>重視している点について</h3>
+              <div class="views-detail">
+                <img src=" img/works-detail/works-1-7.png" alt="">
+                <p class="detail">
+                  既存の画像投稿型SNSであるインスタグラムを参考にして開発しました。コンピュータのフォルダー管理をヒントにして、インスタグラムには存在しないラベル機能というものを実装しました。
+                  投稿にラベルを設定することで、プロフィール画面上の投稿画像をラベルごとに管理することができます。
+                  <br>
+                  <br>
+                  例えば、上記の画像が示すように、
+                  「Foodie」というラベルを選択した時にはラベル名に「Foodie」が設定されている投稿のみが表示されます。
+                  また、『
+                  <i class="fa-solid fa-tag"></i>
+                  』の下に「Foodie」というラベル名が表示される処理を実装しております。
+                </p>
+              </div>
+            </div>
+            <div class="fade-in">
+              <h3>コーディングについて</h3>
 
-            <p>
-              プロフィール画面と新規投稿画面、投稿編集画面、投稿一覧画面、検索結果画面、プロフィール編集画面の6画面から構成される画像投稿型SNSのWebアプリケーションです。
-            </p>
-
-            <h3>アプリURL</h3>
-            <p><a href="https://ishistagram-914f42dea72b.herokuapp.com" target="_blank"
-                rel="noopener">https://ishistagram-914f42dea72b.herokuapp.com</a></p>
-            <h4>テストユーザー</h4>
-            <span><strong>メールアドレス: </strong>ishistagram_app@example.com</span><br>
-            <span><strong>パスワード: </strong>Ishistagram_app</span>
-            <h3>ソースコードURL</h3>
-            <p><a href="https://github.com/yusuke-97/ishistagram_app" target="_blank"
-                rel="noopener">https://github.com/yusuke-97/ishistagram_app</a></p>
-            <h3>担当</h3>
-            <p>基本設計、開発、テスト</p>
-            <h3>サービスを開発したきっかけ</h3>
-            <p>
-              SNSが様々なシーンで活用される中で、SNSユーザーが個人の興味に応じたコンテンツを効率的に整理し、同じ趣味を持つコミュニティと繋がる方法が限られていると感じました。
-              そこで、趣味や興味のあるコンテンツを「ラベル」でカスタマイズし、個人の趣向を反映させたコンテンツ管理ができることを目的に開発しました。
-            </p>
-            <h3>使用技術</h3>
-            <p>HTML / CSS / JavaScript / jQuery / PHP / Laravel / Amazon S3</p>
-            <h3>重視している点について</h3>
-            <p>
-              <img src="img/works-detail/works-1-7.png" alt="">
-            </p>
-            <p>
-              既存の画像投稿型SNSであるインスタグラムを参考にして開発しました。コンピュータのフォルダー管理をヒントにして、インスタグラムには存在しないラベル機能というものを実装しました。
-              投稿にラベルを設定することで、プロフィール画面上の投稿画像をラベルごとに管理することができます。
-            </p>
-            <p>
-              例えば、上記の画像が示すように、
-              「Foodie」というラベルを選択した時にはラベル名に「Foodie」が設定されている投稿のみが表示されます。
-              また、『
-              <i class="fa-solid fa-tag"></i>
-              』の下に「Foodie」というラベル名が表示される処理を実装しております。
-            </p>
-            <h3>コーディングについて</h3>
-            <p>
-              Webアプリケーションを開発する上で、PCはもちろんのこと、スマートフォンでも見やすくするためレスポンシブ対応を施しております。
-            </p>
+              <p>
+                Webアプリケーションを開発する上で、PCはもちろんのこと、スマートフォンでも見やすくするためレスポンシブ対応を施しております。
+              </p>
+            </div>
           </div>
           <div class="home-link">
-            <a href="index.html#works">Works一覧へ</a>
+            <a href="index.html#works" class="cp_link">
+              <span data-text="Works一覧へ">Works一覧へ</span>
+            </a>
           </div>
         </div>
       </article>
 
       <div class="page-top" id="js-page-top">
-        <span class="material-icons-outlined">expand_less</span>
+        <img src="img/page-top-icon.svg" alt="ページトップ" class="page-top-icon">
       </div>
     </main>
 
     <!-- footer -->
     <footer class="footer">
-      <div class="copyright">&copy;YUSUKE ISHIYAMA</div>
+      <div class="container">
+        <h1 class="footer-logo">
+          <a href="index.html">YUSUKE ISHIYAMA</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="index.html#works">WORKS</a></li>
+            <li class="gnav-item"><a href="index.html#skill">SKILL</a></li>
+            <li class="gnav-item"><a href="index.html#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+
+      </div>
+      <div class="copyright">
+        &copy;YUSUKE ISHIYAMA
+      </div>
     </footer>
     <!-- /footer -->
 
