@@ -22,14 +22,6 @@
         <h1 class="header-logo">
           <a href="index.html">YUSUKE ISHIYAMA</a>
         </h1>
-
-        <!-- ハンバーガーメニューのアイコン -->
-        <!-- <button class="hamburger-menu" id="hamburger-btn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button> -->
-
         <!-- ナビゲーションメニュー -->
         <nav class="gnav" id="nav-menu">
           <ul class="gnav-list">
@@ -50,8 +42,8 @@
           <h2 class="article-title fade-in">画像投稿型SNSアプリ【ISHISTAGRAM】</h2>
           <div class="article-body">
             <div class="fade-in">
-              <img src="img/works-detail/works-1-1.png" alt="トップ画像">
-              <a href="#" class="view-site">
+              <img src="img/works-detail/works-1-fv.png" alt="トップ画像">
+              <a href="https://ishistagram-914f42dea72b.herokuapp.com" class="view-site" target="_blank">
                 View Site
                 <span class="iconify" data-icon="si:double-arrow-right-duotone" data-inline="false"></span>
               </a>
@@ -60,12 +52,10 @@
               <ul>
                 <li>
                   <img src="img/works-detail/github-icon.svg">
-                  <a href="https://github.com/yusuke-97/ishistagram_app"
-                    class="github-link">https://ishistagram-914f42dea72b.herokuapp.com</a>
+                  <a href="https://github.com/yusuke-97/ishistagram_app" class="github-link" target="_blank">
+                    https://github.com/yusuke-97/ishistagram_app
+                  </a>
                 </li>
-                <!-- <h4>テストユーザー</h4>
-                <span><strong>メールアドレス: </strong>ishistagram_app@example.com</span><br>
-                <span><strong>パスワード: </strong>Ishistagram_app</span> -->
                 <li>
                   <div class="arrow-box">Role</div>
                   <span class="text">基本設計、開発、テスト</span>
@@ -86,7 +76,7 @@
             <div class="fade-in">
               <h3>概要</h3>
               <p>
-                プロフィール画面と新規投稿画面、投稿編集画面、投稿一覧画面、検索結果画面、プロフィール編集画面の6画面から構成される画像投稿型SNSのWebアプリケーションです。
+                プロフィール画面と新規投稿画面、投稿編集画面、検索結果画面、プロフィール編集画面の6画面から構成される画像投稿型SNSのWebアプリケーションです。
               </p>
             </div>
             <ul class="overview-list">
@@ -108,12 +98,6 @@
                   <span class="text">投稿編集画面</span>
                 </a>
               </li>
-              <!-- <li>
-                <a href="#post-list">
-                  <img src="img/works-detail/gear-icon.svg">
-                  <span class="text">投稿一覧画面</span>
-                </a>
-              </li> -->
               <li>
                 <a href="#search-result">
                   <img src="img/works-detail/gear-icon.svg">
@@ -134,6 +118,7 @@
                 <p class="detail">
                   ユーザーのプロフィール画面では、過去に投稿したことがあるものが表示されます。
                   また、他のユーザーをフォローしたり、自分のプロフィールを編集することもできます。
+                  さらに、ラベル選択によりラベルのついた投稿のみを表示させることもできます。
                 </p>
               </div>
             </div>
@@ -142,8 +127,9 @@
               <div class="views-detail">
                 <img src="img/works-detail/works-1-2.png" alt="">
                 <p class="detail">
-                  画像と投稿文、タグをつけて投稿することができます。タグをつけることによって、
+                  画像と投稿文、ラベルをつけて投稿することができます。ラベルをつけることによって、
                   プロフィール画面で、投稿の管理がしやすくなります。
+                  ラベルは最大2個まで設定することができます。
                 </p>
               </div>
             </div>
@@ -152,21 +138,18 @@
               <div class="views-detail">
                 <img src="img/works-detail/works-1-3.png" alt="">
                 <p class="detail">
-                  過去の投稿を編集することができます。例えば、タグを変更したり、追加したりして
+                  過去の投稿を編集することができます。例えば、ラベルの変更や追加によって
                   プロフィール画面で管理しやすくなります。
                 </p>
               </div>
             </div>
-            <!-- <div>
-              <h3 id="post-list">投稿一覧画面</h3>
-              <img src="img/works-detail/works-1-4.png" alt="">
-            </div> -->
             <div>
               <h3 id="search-result">検索結果画面</h3>
               <div class="views-detail">
                 <img src=" img/works-detail/works-1-5.png" alt="">
                 <p class="detail">
-                  ハッシュタグやタグで関連する他のユーザーの投稿を検索することができます。
+                  検索結果画面では、ハッシュタグやラベルで関連する他のユーザーの投稿を検索することができます。
+                  これにより、ユーザーが興味のある投稿のみを見つけることができます。
                 </p>
               </div>
             </div>
@@ -175,7 +158,7 @@
               <div class="views-detail">
                 <img src="img/works-detail/works-1-6.png" alt="">
                 <p class="detail">
-                  プロフィール編集画面では、ユーザーの基本情報を編集することができます。
+                  プロフィール編集画面では、プロフィール画像や名前、自己紹介など、ユーザーの基本情報を編集することができます。
                 </p>
               </div>
             </div>

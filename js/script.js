@@ -58,7 +58,6 @@ $(function () {
         $("#nav-menu").toggleClass("open"); // メニューの表示・非表示切り替え
     });
 
-
     // AjaxでSTATIC FORMSにデータを送信
     $('#submit').on('click', function (event) {
         // formタグによる送信を拒否
@@ -183,14 +182,14 @@ $(function () {
     // スクロール時にfade-in要素を表示
     $(window).on("scroll", function () {
         $('.fade-in').each(function () {
-        var scrollTop = $(window).scrollTop(); // 現在のスクロール位置
-        var windowHeight = $(window).height(); // ウィンドウの高さ
-        var offsetTop = $(this).offset().top;  // 要素の位置
+            var scrollTop = $(window).scrollTop(); // 現在のスクロール位置
+            var windowHeight = $(window).height(); // ウィンドウの高さ
+            var offsetTop = $(this).offset().top;  // 要素の位置
 
-        // 要素が画面内に入ったらactiveクラスを追加
-        if (scrollTop > offsetTop - windowHeight + 50) {
-            $(this).addClass('active');
-        }
+            // 要素が画面内に入ったらactiveクラスを追加
+            if (scrollTop > offsetTop - windowHeight + 50) {
+                $(this).addClass('active');
+            }
         });
     });
 
@@ -198,15 +197,14 @@ $(function () {
     $(window).trigger("scroll");
 
     // Chart.js レーダーチャートの追加
-    
     let skillChartInstance = null; // チャートインスタンス用の変数
 
-    // function renderSkillChart() {
+    function renderSkillChart() {
         const canvas = document.getElementById('skillChart');
 
         // Canvasが存在しない場合は処理をスキップ
         if (!canvas) {
-            console.error('Canvas element "skillChart" is not found.');
+            console.warn('Canvas element "skillChart" is not found.');
             return;
         }
 
@@ -214,14 +212,11 @@ $(function () {
 
         // 既存のチャートインスタンスがあれば破棄
         if (skillChartInstance) {
-            console.log('Destroying existing chart instance');
             skillChartInstance.destroy();
             skillChartInstance = null; // 破棄後は null にリセット
         }
 
-        
         // 新しいチャートを作成
-        console.log('Creating new chart instance');
         skillChartInstance = new Chart(ctx, {
             type: 'radar',
             data: {
@@ -269,22 +264,14 @@ $(function () {
                     legend: { display: false }
                 }
             }
-        }),
+        });
+    }
 
-        // チャート生成をページ読み込み時に1回だけ実行
-        $(document).ready(function () {
-            if ($('#skillChart').length) {
-                console.log('Initializing skill chart');
-                renderSkillChart();
-            }
-        })
-        // if ($('#skillChart').length) {
-        //         console.log('Initializing skill chart');
-        //         renderSkillChart();
-        // }
+    // ページが読み込まれたときに `#skillChart` が存在する場合にのみチャートを初期化
+    $(document).ready(function () {
+        if ($('#skillChart').length) {
+            renderSkillChart();
+        }
+    });
 
-
-
-
-    // });
 });

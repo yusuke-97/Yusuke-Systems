@@ -25,14 +25,6 @@
         <h1 class="header-logo">
           <a href="index.html">YUSUKE ISHIYAMA</a>
         </h1>
-
-        <!-- ハンバーガーメニューのアイコン -->
-        <!-- <button class="hamburger-menu" id="hamburger-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button> -->
-
         <!-- ナビゲーションメニュー -->
         <nav class="gnav" id="nav-menu">
           <ul class="gnav-list">
@@ -54,7 +46,7 @@
           <div class="article-body">
             <div class="fade-in">
               <img src="img/works-detail/works-2-fv.png" alt="トップ画像">
-              <a href="#" class="view-site">
+              <a href="https://foodie-scout-2c43510ee323.herokuapp.com" class="view-site" target="_blank">
                 View Site
                 <span class="iconify" data-icon="si:double-arrow-right-duotone" data-inline="false"></span>
               </a>
@@ -63,8 +55,9 @@
               <ul>
                 <li>
                   <img src="img/works-detail/github-icon.svg">
-                  <a href="https://github.com/yusuke-97/ishistagram_app"
-                    class="github-link">https://github.com/yusuke-97/ishistagram_app</a>
+                  <a href="https://github.com/yusuke-97/ishistagram_app" class="github-link" target="_blank">
+                    https://github.com/yusuke-97/ishistagram_app
+                  </a>
                 </li>
                 <li>
                   <div class="arrow-box">Role</div>
@@ -127,8 +120,8 @@
                 <img src="img/works-detail/works-2-1.png" alt="">
                 <p class="detail">
                   トップ画面では、ユーザーが「料理ジャンル」や「おすすめ店舗」、「注目の店舗」から、飲食店を探すことができます。
-                  また、「人気ユーザー欄」からはグルメなユーザーのおすすめのお店、ユーザーのランキングを知ることができます。
-                  ユーザーにはバッジが表示されており、そのバッチの色によってユーザーの信頼性も視覚的にわかるようにしました。
+                  また、「人気ユーザー欄」からは食通なユーザーのおすすめのお店やユーザーのおすすめ店舗ランキングを知ることができます。
+                  さらに、ユーザーにはバッジが付与され、そのバッチのランクによってユーザーの信頼性も視覚的にわかるようにしました。
                 </p>
               </div>
             </div>
@@ -137,7 +130,7 @@
               <div class="views-detail">
                 <img src="img/works-detail/works-2-2.png" alt="">
                 <p class="detail">
-                  飲食店詳細画面では、飲食店の基本情報やネット予約機能、ユーザーの口コミを表示させており、ユーザーが予約するためのコンテンツを載せております。
+                  飲食店詳細画面では、飲食店の基本情報やネット予約機能、ユーザーの口コミを表示させており、ユーザーが予約するために必要なコンテンツを載せております。
                 </p>
               </div>
             </div>
@@ -146,8 +139,8 @@
               <div class="views-detail">
                 <img src="img/works-detail/works-2-3.png" alt="">
                 <p class="detail">
-                  検索条件に合ったものが表示されます。例えば、「東京 和食」で検索した場合、東京にある和食の飲食店が表示されるようになっております。
-                  また、数値的な評価を載せることによって、ユーザーがより良い飲食店を見つけることができるようにしております。
+                  検索結果画面では、検索条件に合ったものが表示されます。例えば、「東京 和食」で検索した場合、東京にある和食の飲食店が表示されるようになっております。
+                  また、数値的な評価 (星の評価) を載せることによって、ユーザーがより良い飲食店を見つけることができるようにしております。
                 </p>
               </div>
             </div>
@@ -156,7 +149,7 @@
               <div class="views-detail">
                 <img src="img/works-detail/works-2-4.png" alt="">
                 <p class="detail">
-                  ユーザーが訪れたことがある飲食店（本サービスで予約して来店したことがある飲食店）の口コミを順位付きで投稿したときに、このプロフィール画面に表示されます。口コミと順位はジャンルごとに作成することができ、他のユーザーのおすすめの店舗を見つけることができます。
+                  プロフィール画面では、ユーザーが訪れたことがある飲食店（本サービスで予約して来店したことがある飲食店）の口コミをランキング付きで投稿したときに、このプロフィール画面に表示されます。口コミとランキングはジャンルごとに作成することができ、他のユーザーは、プロフィール画面でおすすめの店舗を見つけることもできます。
                 </p>
               </div>
             </div>
@@ -165,7 +158,7 @@
               <div class="views-detail">
                 <img src="img/works-detail/works-2-5.png" alt="">
                 <p class="detail">
-                  レビュー作成画面では、ジャンルごとに口コミとランキングを作成することができます。
+                  レビュー作成画面では、料理ジャンルごとに口コミの投稿とランキングを作成することができます。
                 </p>
               </div>
             </div>
@@ -182,26 +175,10 @@
                   例えば、上記の画像では、予算が1人あたり¥4,500なので、予約時には1人あたり2,250P（¥2,250相当）の予約料金が発生します。
                   また、ポイント残高が不足している場合は、『確認画面へ』というボタンが非活性化される処理を実装しております。
                 </p>
-                <!-- <p class="detail">
-                  例えば、上記の画像では、予算が1人あたり¥4,500なので、予約時には1人あたり2,250P（¥2,250相当）の予約料金が発生します。
-                  また、ポイント残高が不足している場合は、『確認画面へ』というボタンが非活性化される処理を実装しております。
-                </p> -->
               </div>
-              <!-- <p class="detail">
-                <img src="img/works-detail/works-2-6.png" alt="">
-              <p class="detail">
-                このサービスは、グルメ業界における無断キャンセルとフードロスという深刻な問題に対処するため、予約時に予約料金を先払いするシステムを導入しました。
-                予約料金は店舗が設定した予算の50%で、これによりお客様の予約へのコミットメントを促し、同時にレストランの収益損失を最小限に抑えることが可能です。
-                このアプローチは、持続可能な飲食文化を促進し、業界全体の責任ある運営に貢献することが期待されます。
-              </p>
-              <p class="detail">
-                例えば、上記の画像では、予算が1人あたり¥4,500なので、予約時には1人あたり2,250P（¥2,250相当）の予約料金が発生します。
-                また、ポイント残高が不足している場合は、『確認画面へ』というボタンが非活性化される処理を実装しております。
-              </p> -->
             </div>
             <div class="fade-in">
               <h3>コーディングについて</h3>
-
               <p>
                 Webアプリケーションを開発する上で、PCはもちろんのこと、スマートフォンでも見やすくするためレスポンシブ対応を施しております。
               </p>
