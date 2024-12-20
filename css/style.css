@@ -1248,7 +1248,11 @@ img {
   }
 
   .lead {
-    font-size: 2.4vw;
+    font-size: 3.2vw;
+  }
+
+  .sp-only {
+    display: block;
   }
 
 /*--------------------------------
